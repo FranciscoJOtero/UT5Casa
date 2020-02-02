@@ -36,7 +36,8 @@ class Tabla extends Component {
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td rowSpan="4" style={{textAlign:"center"}}> FAMILIA OTERO </td>
+                        <td> FAMILIA OTERO </td>
+                        <td> FAMILIA HERRERO </td>
                     </tr>
                 </tfoot>
             </table>
