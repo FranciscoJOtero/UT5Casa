@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react"
+import { Link, Router } from "@reach/router"
+import CompSimples from "./CompSimples"
+import CompSimples2 from "./CompSimples2"
+import CompSimples3 from "./CompSimples3"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+    render() {
+
+        return (
+
+            <div>
+                <header className="cabeceraFlex">
+                    <div className="cabeceraFlex__elem1">
+                        <Link to="/Inicio"> Inicio </Link>
+                    </div>
+
+                    <div className="cabeceraFlex__elem2">
+                        <Link to="/Pagina1"> Pagina 1 </Link>
+                    </div>
+
+                    <div className="cabeceraFlex__elem3">
+                        <Link to="/Pagina2"> Pagina 2 </Link>
+                    </div>
+                </header>
+
+                <main className="cuerpo">
+                    <Router>
+                        <CompSimples path="/Inicio" />
+                        <CompSimples2 path="/Pagina1"/>
+                        <CompSimples3 path="/Pagina2"/>
+                    </Router>
+                </main>
+            </div>
+
+
+        )
+
+    }
+
 }
 
-export default App;
+export default App
